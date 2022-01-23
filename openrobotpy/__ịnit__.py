@@ -3,7 +3,9 @@ from urllib.parse import quote_plus
 
 token = None
 
-def get_token(token):
+def set_token(token):
+    # We need to make it global otherwise we will not be able to access it
+    global token
     token = token
 
 async def lyrics(song_name):
